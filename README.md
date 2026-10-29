@@ -25,9 +25,11 @@ This creates patterns that can form the basis of hills, plains, valleys, and mou
 
 <img width="750" height="300" alt="image" src="https://github.com/user-attachments/assets/b66c1e49-57db-4a8c-b795-e84e8bb934ad" />
 
-A 2D noise function takes a position on a plane, represented by coordinates ((x,z)), and returns a value.
+*(image taken from Henrik Kniberg's video) [1]*
+
+A 2D noise function takes a position on a plane, represented by coordinates (x,z), and returns a value.
 Because nearby positions tend to have similar values, the output forms a continuous-looking pattern rather than a collection of unrelated random numbers.
-At each horizontal coordinate ((x,z)), the noise determines a height (y).
+At each horizontal coordinate (x,z), the noise determines a height (y).
 Applying this across the map produces a Heightmap.
 
 ## Terrain Shaping concept
@@ -37,11 +39,18 @@ Three important Noise fields are Continentalness, Erosion, and Peaks & Valleys.
 
 <img width="765" height="180" alt="image" src="https://github.com/user-attachments/assets/f06a719a-7b1a-4b45-af1a-fe2386ef7c61" />
 
+*(image taken from Henrik Kniberg's video) [1]*
+
 - **Continentalness** — helps shape the transition between oceans, coastlines, and inland terrain.
 - **Erosion** — influences whether terrain tends toward flatter regions or more rugged landscapes.
 - **Peaks & Valleys** — helps determine the character of the terrain, from valleys to prominent peaks.
 
 These fields don't work as isolated terrain generators. Their interactions help determine what kind of landscape emerges at each location.
+
+## Status
+Work in progress.
+The current output is an early version, not the final result.
+Next steps: more noise layers (octaves) for finer detail, smoother coastlines, and more varied splines.
 
 ## My Approach
 Rather than trying to recreate all of Minecraft's world-generation system at once, I'm starting with the underlying concepts:
@@ -63,7 +72,8 @@ This is an experimental starting point, not a reproduction of Minecraft's actual
 - Python
 - NumPy
 - Matplotlib
+- PyVista
 
 ## References
-- Henrik Kniberg — [How Minecraft Generates Terrain](https://www.youtube.com/results?search_query=Henrik+Kniberg+Minecraft+terrain+generation)
+- [1] Henrik Kniberg — [How Minecraft Generates Terrain](https://youtu.be/CSa5O6knuwI)
 
