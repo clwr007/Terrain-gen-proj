@@ -7,7 +7,7 @@ from getNoiseVal import getNoiseVal, generateControlgrid
 width, depth = 500,500
 cCell, eCell, pvCell = 150, 120, 40
 
-seed = 69420
+seed = 676767
 continentalGrid = generateControlgrid(width, depth, cCell, seed)
 erosionGrid = generateControlgrid(width, depth, eCell, seed+1)
 pvGrid = generateControlgrid(width, depth, pvCell, seed+2)
